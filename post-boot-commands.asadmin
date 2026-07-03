@@ -1,15 +1,3 @@
-# Sets off default Grizzly error pages
-set configs.config.server-config.http-service.virtual-server.server.error-page-show-stacktraces=false
-
-# Disable container generated error pages
-set configs.config.server-config.http-service.virtual-server.server.default-web-xml.error-page-exception-type=disabled
-
-# Force JSON for container errors
-set configs.config.server-config.http-service.virtual-server.server.property.defaultErrorPageContentType=application/json
-set configs.config.server-config.http-service.virtual-server.server.property.errorPageContentType=application/json
-
-# Access log JSON
-set configs.config.server-config.http-service.access-log.format="json"
-
-# Mute Mass Indexer
-set-log-levels org.hibernate.search.mapper.pojo.massindexing.impl.PojoMassIndexingLoggingMonitor=WARNING
+set configs.config.server-config.mp.openapi.extensions.enabled=false
+set configurations.config.server-config.mp.openapi.extensions.enabled=false
+set configs.config.server-config.network-config.protocols.protocol.http-listener-1.http.jersey.enabled=false

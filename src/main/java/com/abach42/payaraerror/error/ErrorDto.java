@@ -1,4 +1,4 @@
-package com.abach42.payara_error.error;
+package com.abach42.payaraerror.error;
 
 public record ErrorDto(String message) {
 }

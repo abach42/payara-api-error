@@ -1,6 +1,6 @@
-package com.abach42.payara_error.endpoint;
+package com.abach42.payaraerror.endpoint;
 
-import com.abach42.payara_error.error.ErrorDto;
+import com.abach42.payaraerror.error.ErrorDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.abach42.payara_error;
+package com.abach42.payaraerror;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

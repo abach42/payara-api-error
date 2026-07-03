@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE payara-web-app PUBLIC
+  "-//Payara.fish//DTD Payara Server 6 Servlet 6.0//EN"
+  "https://www.payara.fish/dtds/payara-web-app_6_0.dtd">
+
+<payara-web-app>
+  <class-loader delegate="false" />
+
+  <!-- WICHTIG: verhindert Zugriff auf Server Module -->
+  <property name="class-loader-delegate" value="false"/>
+
+  <!-- harte Isolation gegen Global Modules -->
+  <property name="use-component-class-loader" value="true"/>
+</payara-web-app>
