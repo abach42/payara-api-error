@@ -9,4 +9,4 @@ RUN mvn clean package -DskipTests
 
 FROM payara/server-full:6.2025.11-jdk17
 COPY post-boot-commands.asadmin /opt/payara/config/post-boot-commands.asadmin
-COPY --from=build /app/target/*.war ${DEPLOY_DIR}/ROOT.war
+COPY --from=build /app/target/*.war ${DEPLOY_DIR}/api.war

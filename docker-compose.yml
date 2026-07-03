@@ -4,12 +4,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"  # HTTP Web-Port für deine REST-Endpunkte
-      - "4848:4848"  # Payara Admin Console
+      - "8080:8080"
+      - "4848:4848"
     volumes:
-      - payara_logs:/opt/payara/server/glassfish/domains/domain1/logs
+      - ./post-boot-commands.asadmin:/opt/payara/config/boot-commands.asadmin
     environment:
       PAYARA_LOG_TO_CONSOLE: "true"
-
-volumes:
-  payara_logs:
+      POSTBOOT_COMMANDS: /opt/payara/config/post-boot-commands.asadmin

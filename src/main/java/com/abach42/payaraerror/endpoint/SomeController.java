@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/v1")
 public class SomeController {
+
+    @GetMapping("/hello")
+    public ResponseEntity<ErrorDto> getHello() {
+        return ResponseEntity.ok().build();
+    }
 
     @GetMapping("/notfound")
     public ResponseEntity<ErrorDto> getNotFound() {

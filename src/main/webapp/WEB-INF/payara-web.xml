@@ -5,10 +5,4 @@
 
 <payara-web-app>
   <class-loader delegate="false" />
-
-  <!-- WICHTIG: verhindert Zugriff auf Server Module -->
-  <property name="class-loader-delegate" value="false"/>
-
-  <!-- harte Isolation gegen Global Modules -->
-  <property name="use-component-class-loader" value="true"/>
 </payara-web-app>
