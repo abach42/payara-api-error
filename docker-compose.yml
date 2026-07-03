@@ -1,0 +1,18 @@
+services:
+  payara-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"  # HTTP Web-Port für deine REST-Endpunkte
+      - "4848:4848"  # Payara Admin Console
+    volumes:
+      - ./payara/post-boot-commands.asadmin:/opt/payara/config/boot-commands.asadmin
+      - payara_logs:/opt/payara/server/glassfish/domains/domain1/logs
+    environment:
+      JVM_ARGS: "-Xms512m -Xmx1024m -Xdebug -DLogOutput=console -Dhazelcast.discovery.enabled=false -Dhazelcast.jcache.provider.type=disabled -Djavax.cache.spi.CachingProvider= -Djersey.config.disableMoxyJson.server=true"
+      POSTBOOT_COMMANDS: /opt/payara/config/post-boot-commands.asadmin
+      PAYARA_LOG_TO_CONSOLE: "true"
+
+volumes:
+  payara_logs:
