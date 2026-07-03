@@ -1,3 +1,2 @@
-set configs.config.server-config.mp.openapi.extensions.enabled=false
 set configurations.config.server-config.mp.openapi.extensions.enabled=false
 set configs.config.server-config.network-config.protocols.protocol.http-listener-1.http.jersey.enabled=false
